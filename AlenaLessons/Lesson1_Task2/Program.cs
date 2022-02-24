@@ -6,15 +6,28 @@ namespace Lesson1_Task2
     {
         static void Main(string[] args)
         {
-            double width = 5;
-            double length = 3;
-            double height = 4;
+           Console.Write("Enter the width: ");
+            double width = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the length: ");
+            double length = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the height: ");
+            double height = Convert.ToDouble(Console.ReadLine());
+
             double diagonal = 0;
 
-            diagonal = Math.Sqrt(Math.Pow(width, 2) + Math.Pow(length, 2) + Math.Pow(height, 2));
+            if (width < 0.1 || length < 0.1 || height < 0.1)
+            {
+                Console.WriteLine("The value should be > 0!");
+            }
+            else
+            {
+                diagonal = Math.Sqrt(Math.Pow(width, 2) + Math.Pow(length, 2) + Math.Pow(height, 2));
 
-            Console.WriteLine(diagonal);
-            Console.ReadKey();
+                Console.WriteLine($"Parallelepiped diagonal length: { diagonal}"); 
+                Console.ReadKey();
+            }
         }
     }
 }
