@@ -12,6 +12,8 @@ namespace Lesson1_Task3
             Console.WriteLine("Enter y value: ");
             double y = Convert.ToDouble(Console.ReadLine());
 
+           
+
             Console.WriteLine("Enter z value: ");
             double z = 0;
             bool notNumber = false;
