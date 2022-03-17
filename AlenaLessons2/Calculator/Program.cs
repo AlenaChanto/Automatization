@@ -28,30 +28,42 @@ namespace Lesson1_Task3
                     Console.WriteLine();
                     double sum = digit1 + digit2;
                     Console.WriteLine($"Result is: {sum}");
+                    break;
                 }
                 else if (enteredsymbol.Equals(arraySymbols[1]))
                 {
                     Console.WriteLine();
                     double subtraction = digit1 - digit2;
                     Console.WriteLine($"Result is: {subtraction}");
+                    break;
                 }
                 else if (enteredsymbol.Equals(arraySymbols[2]))
                 {
-                    Console.WriteLine();
-                    double devision = digit1 / digit2;
-                    Console.WriteLine($"Result is: {devision}");
+                    if (digit2 == 0)
+                    {
+                        Console.WriteLine("it's not possible to devide by 0! Enter another operation symbol. ");
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                        double devision = digit1 / digit2;
+                        Console.WriteLine($"Result is: {devision}");
+                        break;
+                    }
                 }
                 else if (enteredsymbol.Equals(arraySymbols[3]))
                 {
                     Console.WriteLine();
                     double multiplication = digit1 * digit2;
                     Console.WriteLine($"Result is: {multiplication}");
+                    break;
                 }
                 else if (enteredsymbol.Equals(arraySymbols[4]))
                 {
                     Console.WriteLine();
                     double exponent = Math.Pow(digit1, digit2);
                     Console.WriteLine($"Result is: {exponent}");
+                    break;
                 }
                 else
                 {
